@@ -1,0 +1,345 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fed9b7;
+  cursor: default;
+}
+
+nav {
+  color: #00afb9;
+  background: transparent;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: auto;
+  z-index: 1000;
+}
+
+.hamburger {
+  width: 30px;
+  height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  background: #00afb9;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(8px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-8px); }
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background: #fed9b7;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.menu-list.show { display: flex; }
+
+.menu-list li { padding: 10px 20px; }
+
+.menu-list li a {
+  text-decoration: none;
+  color: #00afb9;
+  font-weight: bold;
+}
+
+.pata-container {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.pata {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #00afb9;
+  -webkit-mask: url("pata.png") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("pata.png") no-repeat center;
+  mask-size: contain;
+  margin: 0 auto;
+  display: flex;
+  top: 90px;
+  z-index: 1001;
+}
+
+button.scroll-top-btn {
+  width: 60px;
+  height: 60px;
+  background: #00afb9;
+  -webkit-mask: url("arrow.png") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("arrow.png") no-repeat center;
+  mask-size: contain;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  z-index: 1002;
+  cursor: pointer;
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  color: #00afb9;
+  margin: 100px 0 20px;
+  font-size: 2rem;
+}
+
+p {
+  text-align: center;
+  color: #00afb9;
+  margin: 20px 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.secao-final {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 400px;
+  background: #fed9b7;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.bloco-esquerdo,
+.bloco-direito {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px;
+  max-width: 500px;
+}
+
+.conteudo-bloco {
+  text-align: center;
+  max-width: 350px;
+}
+
+.conteudo-bloco h3 {
+  color: #00afb9;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.conteudo-bloco p {
+  color: #0081a7;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.linha-divisoria {
+  width: 2px;
+  background: linear-gradient(to bottom, transparent 0%, #00afb9 50%, transparent 100%);
+  margin: 0 20px;
+  position: relative;
+}
+
+.linha-divisoria::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #00afb9;
+  border-radius: 50%;
+}
+
+.bloco-esquerdo:hover .conteudo-bloco h3,
+.bloco-direito:hover .conteudo-bloco h3 {
+  transform: translateY(-5px);
+}
+
+.btn-acao {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  color: #fff;
+}
+
+#btnAdotar {
+  background-color: #00afb9;
+}
+
+#btnAdotar:hover {
+  background-color: #0081a7;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 175, 185, 0.3);
+}
+
+#btnCadastrar {
+  background-color: #f07167;
+}
+
+#btnCadastrar:hover {
+  background-color: #d90429;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(240, 113, 103, 0.3);
+}
+
+.input-group { margin-bottom: 15px; }
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #00afb9;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: rgb(247, 193, 157);
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-icon { font-size: 3rem; text-align: center; margin-bottom: 15px; }
+
+.btn-fechar-modal {
+  padding: 12px 30px;
+  background: #00afb9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-fechar-modal:hover { background: #0081a7; }
+
+.contato-info {
+  background: rgb(247, 193, 157);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.contato-info p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .secao-final {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .bloco-esquerdo,
+  .bloco-direito {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .linha-divisoria {
+    width: 80%;
+    height: 2px;
+    margin: 20px auto;
+    background: linear-gradient(to right, transparent 0%, #00afb9 50%, transparent 100%);
+  }
+
+  .conteudo-bloco h3 { font-size: 1.5rem; }
+
+  .conteudo-bloco p { font-size: 1rem; }
+
+  .btn-acao {
+    padding: 12px 25px;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+
+  .modal-content {
+    margin: 10% auto;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoptly - Pets para Adoção</title>
+    <link rel="stylesheet" href="./adotar.css">
+</head>
+<body>
+    <nav>
+        <h1>Adoptly</h1>
+        <ul class="menu-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="adotar.html">Pets</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <main class="container-pets">
+        <header class="cabecalho-pets">
+            <h2>Encontre seu novo amigo</h2>
+            <p>Conheça nossos pets esperando por um lar</p>
+
+            <div class="filtros-container">
+                <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="caes">🐕 Cães</button>
+                <button class="filtro-btn" data-filtro="gatos">🐈 Gatos</button>
+            </div>
+        </header>
+
+        <section class="grade-pets" id="gradePets">
+            <!-- Cards de pets serão inseridos aqui -->
+        </section>
+    </main>
+
+    <div class="modal" id="modalAdocao" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <button class="close-modal" aria-label="Fechar">&times;</button>
+            <h3>Que legal! Você quer adotar <span id="nomePet"></span>!</h3>
+            <p>Para continuar com o processo de adoção, entre em contato com a gente:</p>
+            <div class="contato-info">
+                <p>📞 (xx) xxxx-xxxx</p>
+                <p>✉️ adoptlypets@gmail.com</p>
+            </div>
+            <button class="btn-fechar-modal">Entendido</button>
+        </div>
+    </div>
+
+    <script src="adotar.js"></script>
+</body>
+</html>

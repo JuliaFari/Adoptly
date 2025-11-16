@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adoptly</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Adoptly</h1>
+      <div class="hamburger" id="menuToggle" aria-label="Abrir menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-list" id="menuList">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="adotar.html">Pets</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="pata" aria-hidden="true"></div>
+      <h2>Adote um novo amigo hoje!</h2>
+      <p>Encontre o pet perfeito.</p>
+      <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Ir para o final">
+        <img src="arrow.png" alt="seta" />
+      </button>
+    </section>
+
+    <section class="secao-final">
+      <div class="bloco-esquerdo">
+        <div class="conteudo-bloco">
+          <h3>Encontre seu novo amigo</h3>
+          <p>Milhares de pets estão esperando por um lar cheio de amor.</p>
+          <button class="btn-acao" id="btnAdotar">Quero Adotar</button>
+        </div>
+      </div>
+
+      <div class="linha-divisoria" role="separator" aria-hidden="true"></div>
+
+      <div class="bloco-direito">
+        <div class="conteudo-bloco">
+          <h3>Ajude um pet a encontrar um lar</h3>
+          <p>Cadastre pets para adoção e ajude a transformar vidas.</p>
+          <button class="btn-acao" id="btnCadastrar">Cadastrar um Pet</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modalCadastrar" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Fechar modal">&times;</button>
+      <h3 id="modalTitle">Que bom que quer cadastrar um pet!</h3>
+      <p>Para cadastrar um pet para adoção, entre em contato conosco:</p>
+      <div class="contato-info">
+        <p>📞 (xx) xxxx-xxxx</p>
+        <p>✉️ adoptlypets@gmail.com</p>
+      </div>
+      <button class="btn-fechar-modal">Entendido</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
