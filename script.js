@@ -21,7 +21,7 @@
       if (scrollBtn) {
         scrollBtn.addEventListener('click', e => {
           e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         });
       }
 
@@ -40,3 +40,28 @@
       }
     });
   })();
+
+      const modalCadastrar = document.getElementById('modalCadastrar');
+    const btnCadastrar = document.getElementById('btnCadastrar');
+    const closeModalCadastrar = modalCadastrar.querySelector('.close-modal');
+    const btnFecharCadastrar = modalCadastrar.querySelector('.btn-fechar-modal');
+
+    if (btnCadastrar) {
+        btnCadastrar.addEventListener('click', function() {
+            modalCadastrar.style.display = 'block';
+        });
+    }
+
+    closeModalCadastrar.addEventListener('click', function() {
+        modalCadastrar.style.display = 'none';
+    });
+
+    btnFecharCadastrar.addEventListener('click', function() {
+        modalCadastrar.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modalCadastrar) {
+            modalCadastrar.style.display = 'none';
+        }
+    });
