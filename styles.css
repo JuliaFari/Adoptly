@@ -206,11 +206,11 @@ p {
 }
 
 #btnCadastrar {
-  background-color: #f07167;
+  background-color: rgb(248, 163, 114);
 }
 
 #btnCadastrar:hover {
-  background-color: #d90429;
+  background-color:#f07167;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(240, 113, 103, 0.3);
 }
